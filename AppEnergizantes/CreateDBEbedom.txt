@@ -1,0 +1,93 @@
+//Proyecto Ebedom:
+
+Se debe tener un servifor de base dedatos intalado. 
+para el dedarrollo de este proyecto usamos (Wampserver) en MySql pero se puede usar cualquir otro servdor.
+de base de datos. (SqlServer, MongoDB entre otros).
+
+En la sesion de consultas de sql del motor de base de datos, se ejecutan los siguientes comandos.
+
+Para crear la base de datos: 
+
+CREATE DATABASE ebedomdrinksrd;
+
+Para crear las tablas se utilizan los comando siguentes:
+Para la tabla Productos:
+
+USE ebedomdrinksrd;
+CREATE TABLE Produtos(  
+   Id INT NOT NULL AUTO_INCREMENT,  
+   Productos VARCHAR(30) NOT NULL,  
+   Descripcion VARCHAR(40) NOT NULL,
+   Total VARCHAR(20) NOT NULL, 
+   PRIMARY KEY (Id)  
+); 
+
+Para llenar la tabla Productos con informacion, tabla creada en el paso anterior:
+
+INSERT INTO producto (Id, Productos, Descripcion, Total, Precio) VALUES (0001, 'DrinkOne', 'Primera el Corredor', 785000, 27.00);
+INSERT INTO producto (Id, Productos, Descripcion, Total, Precio) VALUES (0002, 'ForYouWin', 'Para ti Ganador', 578000, 35.00);
+INSERT INTO producto (Id, Productos, Descripcion, Total, Precio) VALUES (0003, 'RunnerToday', 'Para los que corren hoy', 490000, 38.00);
+INSERT INTO producto (Id, Productos, Descripcion, Total, Precio) VALUES (0004, 'MasSalud', 'Bebida estracto de te verde', 950000, 60.00);
+INSERT INTO producto (Id, Productos, Descripcion, Total, Precio) VALUES (0005, 'AllPeople', 'Bebida general para todos', 1400000, 25.00);
+INSERT INTO producto (Id, Productos, Descripcion, Total, Precio) VALUES (0006, 'SofarOne', 'Para los que corren mas lejos', 185000, 33.00);
+INSERT INTO producto (Id, Productos, Descripcion, Total, Precio) VALUES (0007, 'BebeMas', 'Para los amantes del sabor', 315000, 30.00);
+INSERT INTO producto (Id, Productos, Descripcion, Total, Precio) VALUES (0008, 'KidsOnly', 'Bebidas para niños', 267000, 15.00)
+INSERT INTO producto (Id, Productos, Descripcion, Total, Precio) VALUES (0009, 'EnergiFlex', 'Primer Producto Elite', 1650252, 50.00);
+
+
+Tabla inventario:
+
+USE ebedomdrinksrd;
+CREATE TABLE Inventario(  
+   Codigo_Prod INT NOT NULL AUTO_INCREMENT,  
+   Productos VARCHAR(30) NOT NULL,  
+   Descripcion VARCHAR(30) NOT NULL,  
+   Existencia_Total VARCHAR(40) NOT NULL,
+   PRIMARY KEY (Codigo_Prod) 
+ ); 
+
+Para llenar la tabla con informacion, tabla creada en el paso anterior:
+
+INSERT INTO inventario (Codigo_Prod, Productos, Descripcion, Existencia_Total, Precio) VALUES (0001, 'DrinkOne', 'Primera el Corredor', 785000, 27.00);
+INSERT INTO inventario (Codigo_Prod, Productos, Descripcion, Existencia_Total, Precio) VALUES (0002, 'ForYouWin', 'Para ti Ganador', 578000, 35.00);
+INSERT INTO inventario (Codigo_Prod, Productos, Descripcion, Existencia_Total, Precio) VALUES (0003, 'RunnerToday', 'Para los que corren hoy', 490000, 38.00);
+INSERT INTO inventario (Codigo_Prod, Productos, Descripcion, Existencia_Total, Precio) VALUES (0004, 'MasSalud', 'Bebida estracto de te verde', 950000, 60.00);
+INSERT INTO inventario (Codigo_Prod, Productos, Descripcion, Existencia_Total, Precio) VALUES (0005, 'AllPeople', 'Bebida general para todos', 1400000, 25.00);
+INSERT INTO inventario (Codigo_Prod, Productos, Descripcion, Existencia_Total, Precio) VALUES (0006, 'SofarOne', 'Para los que corren mas lejos', 185000, 33.00);
+INSERT INTO inventario (Codigo_Prod, Productos, Descripcion, Existencia_Total, Precio) VALUES (0007, 'BebeMas', 'Para los amantes del sabor', 315000, 30.00);
+INSERT INTO inventario (Codigo_Prod, Productos, Descripcion, Existencia_Total, Precio) VALUES (0008, 'KidsOnly', 'Bebidas para niños', 267000, 15.00)
+INSERT INTO inventario (Codigo_Prod, Productos, Descripcion, Existencia_Total, Precio) VALUES (0009, 'EnergiFlex', 'Primer Producto Elite', 1650252, 50.00);
+
+
+Tabla Ventas:
+
+USE ebedomdrinksrd;
+CREATE TABLE Ventas(  
+   Producto VARCHAR(30) NOT NULL,  
+   Cliente VARCHAR(30) NOT NULL,  
+   Empresa VARCHAR(40) NOT NULL,
+   Total_ventas int(15) NOT NULL
+); 
+
+Para llenar la tabla con informacion, tabla creada en el paso anterior:
+
+INSERT INTO Ventas (Cliente, Empresa, Precio, Producto, Total_ventas) VALUES ('Felix Cruz', 'Cocacola', 35.00, 'ForYouWin', 112825);
+INSERT INTO Ventas (Cliente, Empresa, Precio, Producto, Total_ventas) VALUES ('Emilio Jose', 'Colmado el Criollo', 38.00, 'MasSalud', 50272);
+INSERT INTO Ventas (Cliente, Empresa, Precio, Producto, Total_ventas) VALUES ('Alberto Fdez', 'Distribuidora Gral', 27.00, 'DrinkOne', 90115);
+INSERT INTO Ventas (Cliente, Empresa, Precio, Producto, Total_ventas) VALUES ('Don Tato', 'Cafeteria Dom', 33.00, 'SofarOne', 959);
+INSERT INTO Ventas (Cliente, Empresa, Precio, Producto, Total_ventas) VALUES ('Leon Jimenez', 'Cerveceria Nacional', 25.00, 'AllPeople', 3598);
+INSERT INTO Ventas (Cliente, Empresa, Precio, Producto, Total_ventas) VALUES ('Jole Luis', 'Gym Max', 33.00, 'SofarOne', 185554);
+INSERT INTO Ventas (Cliente, Empresa, Precio, Producto, Total_ventas) VALUES ('Frank Peroso', 'Vive100', 30.00, 'BebeMas', 7325);
+INSERT INTO Ventas (Cliente, Empresa, Precio, Producto, Total_ventas) VALUES ('DJ la Uva', 'Energizantes Cibao', 15.00, 'KidsOnly', 12664)
+INSERT INTO Ventas (Cliente, Empresa, Precio, Producto, Total_ventas) VALUES ('Arsenio Diaz', 'Industrias del Caribe', 50.00, 'EnergiFlex', 1650252);
+
+Tabla loginuser: no se uso en el proyecto aunque la creamos la misma solo se uso
+en la diapositiva, para resaltar la aplicacion por eso no la pongo aqui.
+
+Esa ser la 2da parte del proyecto, seria la sesion de usuario, donde la aplicacion tendria
+una pantalla inicial, donde alla que registrar un usuario y poner una clave para acceder a la Aplicacion.
+
+
+****Fin del procedimiento*****..
+
+
