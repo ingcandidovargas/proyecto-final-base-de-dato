@@ -1,0 +1,2 @@
+# proyecto-final-base-de-dato
+ Proyecto Final consiste en inventar una empresa que va a resolver una problemática en concreto que usted se va a inventar y esta solución se va a dar por medio de la implementacion de una Base de Datos que pidio el profesor de la meteria de base de dato seccion 0541 grupo ebedom integrantes CANDIDO VARGAS 18-SIIN-1-006, FELIX CRUZ 18-SIIN-1-005 AMAURYS LARA 18-SIIN-1-027, JOSE CASTELLANO 18-SIIN 1- 025, DAVID CONTRERAS  18-MIIN-1-071
